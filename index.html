@@ -2,95 +2,99 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La danza nos une</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #f7e1ff, #d0f0ff);
+      background: linear-gradient(to bottom right, #fbeaff, #d6f0ff);
+      color: #333;
       text-align: center;
-      color: #4a0072;
-      animation: fadeIn 2s ease-in;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
+    header {
+      padding: 30px 20px 10px;
+      animation: fadeIn 2s ease-in-out;
     }
 
     h1 {
       font-size: 3em;
-      margin-top: 30px;
-      color: #8200d2;
-      animation: slideDown 1.5s ease-in-out;
+      color: #6a1b9a;
+      animation: slideDown 2s ease-out;
     }
 
     h2 {
       font-size: 1.5em;
-      margin-bottom: 20px;
-      color: #6c3fb3;
+      color: #8e24aa;
+      margin-top: -10px;
+      animation: fadeIn 3s ease-in;
     }
 
     @keyframes slideDown {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+      from {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
-    img {
-      width: 80%;
-      max-width: 600px;
-      height: auto;
-      margin: 20px auto;
-      border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      animation: fadeIn 2s ease-in;
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
-    iframe {
+    .banner {
+      margin: 30px auto;
+      max-width: 500px;
       width: 90%;
-      max-width: 720px;
-      height: 405px;
-      border: none;
-      border-radius: 15px;
-      margin: 20px auto;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      display: block;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
       animation: fadeIn 2s ease-in;
     }
 
-    .button {
+    .pdf-link {
       display: inline-block;
-      margin: 30px 10px;
+      margin: 30px auto;
       padding: 12px 25px;
-      background-color: #d26eff;
+      background-color: #ce93d8;
       color: white;
-      border-radius: 30px;
       text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
+      border-radius: 30px;
+      font-size: 1.1em;
+      transition: background-color 0.3s;
+      animation: fadeIn 4s ease-in;
     }
 
-    .button:hover {
-      background-color: #a233dd;
+    .pdf-link:hover {
+      background-color: #ba68c8;
+    }
+
+    .video {
+      margin: 40px auto;
+      width: 90%;
+      max-width: 560px;
+      height: 315px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(106, 27, 154, 0.2);
+      animation: fadeIn 4s ease-in;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>La danza nos une</h1>
+    <h2>Arte, expresión y alegría en cada paso</h2>
+  </header>
 
-  <h1>La danza nos une</h1>
-  <h2>Arte, expresión y alegría en cada paso</h2>
+  <img src="banner_danza.jpg" alt="Banner de danza" class="banner" />
 
-  <img src="banner_danza.jpg" alt="Banner Lúdica de Danzas" />
+  <a href="mi_archivo.pdf" class="pdf-link" target="_blank">Ver presentación en PDF</a>
 
-  <iframe 
-    src="https://www.youtube.com/embed/7eVpUz7GzqE" 
-    title="Lúdica de Danzas: Andrés Aguilar" 
-    allowfullscreen>
-  </iframe>
-
-  <a class="button" href="mi_archivo.pdf" target="_blank">📄 Ver presentación en PDF</a>
-
+  <iframe class="video" src="https://www.youtube.com/embed/aYFxUq9LMM0" allowfullscreen></iframe>
 </body>
 </html>
